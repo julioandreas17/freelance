@@ -1,0 +1,27 @@
+* {
+  font-family: "Montserrat", sans-serif !important;
+}
+
+.border-primary {
+  border-color: #0056A6 !important;
+}
+
+.border-secondary {
+  border-color: #0056A6 !important;
+}
+
+.bg-primary {
+  background: #0056A6 !important;
+}
+
+.bg-secondary {
+  background: #9B9B9B !important;
+}
+
+.text-primary {
+  color: #0056A6 !important;
+}
+
+.text-secondary {
+  color: #9B9B9B !important;
+}
