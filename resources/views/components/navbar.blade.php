@@ -3,7 +3,7 @@
     <div class="container">
       <div class="row d-flex align-items-center">
         <div class="col-auto logo-area">
-          <a href="{!! url('./') !!}" class="text-decoration-none d-block">
+          <a href="{!! url('./') !!}" class="text-decoration-none">
             <div class="row d-flex align-items-center">
               <div class="col-auto mt-3">
                 <img src="{!! url(env('ICON').''.$version) !!}" style="border-radius: 10px;width: 60px;">
