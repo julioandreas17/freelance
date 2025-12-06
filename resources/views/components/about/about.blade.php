@@ -8,7 +8,7 @@
           <b class="text-primary">PT SELARAS ENERGI ELEKTRIKAL</b> is a company engaged in contracting, engineering, electrical material procurement, as well as providing consulting and training services in the electrical power sector. 
           Established with a commitment to delivering the best solutions in the power industry, we prioritize professionalism, work quality, reliability, and safety in every project we undertake.
         </div>
-        <div class="fs-6 mt-3 pe-2" data-aos="fade-right" style="text-align: justify;">
+        <div class="fs-5 mt-3 pe-2" data-aos="fade-right" style="text-align: justify;">
           With the support of certified experts and extensive experience in handling various industrial, commercial, and infrastructure projects, 
           we serve as a trusted partner in fulfilling electrical power needs in accordance with national standards (SNI), SPLN, and international standards.
         </div>
