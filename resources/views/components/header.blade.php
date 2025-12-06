@@ -1,0 +1,17 @@
+<div class="header position-relative w-100 pt-5">
+  <div class="position-absolute start-0 end-0 top-0 bottom-0" style="background: url({!! url('public/images/header.jpg'.$version) !!});background-size: cover;background-position: center;background-repeat: no-repeat;"></div>
+  <div class="position-absolute start-0 end-0 top-0 bottom-0 bg-dark" style="opacity: 0.5;"></div>
+  <div class="container position-relative">
+    <div class="position-absolute start-0 top-0 bottom-0 bg-white my-5" data-aos="fade-in" style="width: 4px;border-radius: 100px;"></div>
+    <div class="row position-relative">
+      <div class="col-8">
+        <div class="fs-1 text-white ps-4" data-aos="fade-right">
+          Committed to providing the best solutions in the <span class="bg-white text-primary py-1 px-3" style="border-radius: 10px;">Electricity</span> sector, we prioritize professionalism, quality workmanship, reliability, and safety in every project.
+        </div>
+      </div>
+    </div>
+  </div>
+  <div class="position-relative w-100" align="center" style="margin-top: -50px;">
+    <img src="{!! url('public/images/waves.svg'.$version) !!}" alt="waves" class="w-100">
+  </div>
+</div>
