@@ -44,6 +44,7 @@
     @include('components.about')
     @include('components.services')
     @include('components.products')
+    @include('components.contact')
     
     <script>
       var URL = '{!! url('./') !!}';
