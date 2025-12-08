@@ -1,5 +1,5 @@
 <div class="header position-relative w-100 pt-5">
-  <div class="position-absolute start-0 end-0 top-0 bottom-0" style="background: url({!! url('public/images/header.jpg'.$version) !!});background-size: cover;background-position: center;background-repeat: no-repeat;"></div>
+  <div class="position-absolute start-0 end-0 top-0 bottom-0" style="background: url({!! url('public/images/header.jpg'.$version) !!});background-size: cover;background-position: center;background-repeat: no-repeat;background-attachment: fixed;"></div>
   <div class="position-absolute start-0 end-0 top-0 bottom-0 bg-dark" style="opacity: 0.5;"></div>
   <div class="container position-relative">
     <div class="position-absolute start-0 top-0 bottom-0 bg-white my-5" data-aos="fade-in" style="width: 4px;border-radius: 100px;"></div>

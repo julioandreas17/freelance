@@ -256,6 +256,38 @@ $('body').find('.about-us').on('click', 'div[role="button"]', function (){
   AOS.init();
 });
 
+$('body').find('.products').on('click', 'div[role="button"]', function (){
+  let products_element = $('.products');
+  let button = $(this);
+  let action = button.attr('action');
+  if (action != ''){
+
+    products_element.find('.item').each(function (index, element){
+      $(element).hide();
+    });
+
+    products_element.find('div[role="button"]').each(function (index, element){
+      $(element).removeClass('bg-white')
+      .removeClass('text-primary');
+    });
+    button.addClass('bg-white')
+    .addClass('text-primary');
+
+    if (action == 'all'){
+      products_element.find('.item').each(function (index, element){
+        $(element).fadeIn();
+      });
+    } else {
+      products_element.find('.item').each(function (index, element){
+        if ($(element).attr('data-category') == action){
+          $(element).fadeIn();
+        }
+      });
+    }
+
+  }
+});
+
 function open_menu_top (){
   let element = $('.menu-top');
   element.removeClass('position-relative')

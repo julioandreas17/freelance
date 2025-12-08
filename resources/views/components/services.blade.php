@@ -19,12 +19,12 @@
                   <img src="{!! url('public/images/contractor.jpg') !!}" alt="service" class="w-100" style="border-radius: 15px;">
                 </div>
                 <div class="position-absolute top-0 start-0 end-0 d-flex justify-content-center p-3">
-                  <div class="position-relative bg-white py-2 px-3 rounded-circle shadow" role="button" action="up">
+                  <div class="position-relative py-2 px-3 rounded-circle shadow" role="button" action="up" style="background-color: rgba(236, 240, 241, 0.8);">
                     <i class="bi bi-chevron-up fs-3"></i>
                   </div>
                 </div>
                 <div class="position-absolute bottom-0 start-0 end-0 d-flex justify-content-center p-3">
-                  <div class="position-relative bg-white py-2 px-3 rounded-circle shadow" role="button" action="down">
+                  <div class="position-relative py-2 px-3 rounded-circle shadow" role="button" action="down" style="background-color: rgba(236, 240, 241, 0.8);">
                     <i class="bi bi-chevron-down fs-3"></i>
                   </div>
                 </div>
@@ -94,7 +94,7 @@
 
           <div class="row">
             <div class="col-12 mt-3">
-              <div class="position-relative bg-white text-primary py-2 px-3" style="border-radius: 15px;">
+              <div class="position-relative bg-white text-primary py-2 px-3" style="border-radius: 15px;" data-aos="fade-in">
                 <table class="w-100">
                   <tbody>
                     <tr>
@@ -107,7 +107,7 @@
               </div>
             </div>
             <div class="col-12 mt-3">
-              <div class="position-relative bg-white text-primary py-2 px-3" style="border-radius: 15px;">
+              <div class="position-relative bg-white text-primary py-2 px-3" style="border-radius: 15px;" data-aos="fade-in">
                 <table class="w-100">
                   <tbody>
                     <tr>
@@ -120,7 +120,7 @@
               </div>
             </div>
             <div class="col-12 mt-3">
-              <div class="position-relative bg-white text-primary py-2 px-3" style="border-radius: 15px;">
+              <div class="position-relative bg-white text-primary py-2 px-3" style="border-radius: 15px;" data-aos="fade-in">
                 <table class="w-100">
                   <tbody>
                     <tr>
@@ -133,7 +133,7 @@
               </div>
             </div>
             <div class="col-12 mt-3">
-              <div class="position-relative bg-white text-primary py-2 px-3" style="border-radius: 15px;">
+              <div class="position-relative bg-white text-primary py-2 px-3" style="border-radius: 15px;" data-aos="fade-in">
                 <table class="w-100">
                   <tbody>
                     <tr>
@@ -146,7 +146,7 @@
               </div>
             </div>
             <div class="col-12 mt-3">
-              <div class="position-relative bg-white text-primary py-2 px-3" style="border-radius: 15px;">
+              <div class="position-relative bg-white text-primary py-2 px-3" style="border-radius: 15px;" data-aos="fade-in">
                 <table class="w-100">
                   <tbody>
                     <tr>
@@ -162,7 +162,7 @@
 
         </div>
         <div class="col-5">
-          <img src="{!! url('public/images/illustration.png') !!}" class="w-100">
+          <img src="{!! url('public/images/illustration.png') !!}" class="w-100" data-aos="fade-left">
         </div>
       </div>
     </div>

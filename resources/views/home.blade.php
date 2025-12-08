@@ -43,6 +43,7 @@
     @include('components.header')
     @include('components.about')
     @include('components.services')
+    @include('components.products')
     
     <script>
       var URL = '{!! url('./') !!}';
