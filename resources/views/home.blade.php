@@ -17,11 +17,13 @@
     <meta property="og:image" content="{!! url(env('LOGO').''.$version) !!}">
     <meta property="og:image:type" content="image/png">
 
+    <!-- 
     <meta name="twitter:card" content="summary">
     <meta name="twitter:site" content="{!! url('./') !!}">
     <meta name="twitter:title" content="{{ env('TITLE') }}">
     <meta name="twitter:description" content="{{ env('DESCRIPTION') }}">
     <meta name="twitter:image" content="{!! url(env('LOGO').''.$version) !!}">
+     -->
 
     <title>{{ env('TITLE') }}</title>
     <link rel="shortcut icon" href="{!! url(env('ICON').''.$version) !!}" type="image/x-icon">
