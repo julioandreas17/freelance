@@ -90,39 +90,79 @@
         Your trusted partner for safe and certified electrical engineering services.
       </div>
       <div class="row d-flex align-items-center mt-3">
-        <div class="col-4">
-          <img src="{!! url('public/images/illustration.png') !!}" class="w-100">
-        </div>
-        <div class="col-8">
+        <div class="col-7">
 
           <div class="row">
             <div class="col-12 mt-3">
-              <div class="position-relative bg-white text-primary p-3" style="border-radius: 15px;">
-                <i class="bi bi-check2-circle"></i> CERTIFIED EXPERTS/PERSONNEL (SKTT, K3, ETC.)
+              <div class="position-relative bg-white text-primary py-2 px-3" style="border-radius: 15px;">
+                <table class="w-100">
+                  <tbody>
+                    <tr>
+                      <td>CERTIFIED EXPERTS/PERSONNEL (SKTT, K3, ETC.)</td>
+                      <td>&nbsp;</td>
+                      <td align="right"><i class="bi bi-check2-circle fs-4"></i></td>
+                    </tr>
+                  </tbody>
+                </table>
               </div>
             </div>
             <div class="col-12 mt-3">
-              <div class="position-relative bg-white text-primary p-3" style="border-radius: 15px;">
-                <i class="bi bi-check2-circle"></i> WORK STANDARDS COMPLY WITH SNI & SPLN
+              <div class="position-relative bg-white text-primary py-2 px-3" style="border-radius: 15px;">
+                <table class="w-100">
+                  <tbody>
+                    <tr>
+                      <td>WORK STANDARDS COMPLY WITH SNI & SPLN</td>
+                      <td>&nbsp;</td>
+                      <td align="right"><i class="bi bi-check2-circle fs-4"></i></td>
+                    </tr>
+                  </tbody>
+                </table>
               </div>
             </div>
             <div class="col-12 mt-3">
-              <div class="position-relative bg-white text-primary p-3" style="border-radius: 15px;">
-                <i class="bi bi-check2-circle"></i> ON-TIME AND EFFICIENT WORK COMPLETION
+              <div class="position-relative bg-white text-primary py-2 px-3" style="border-radius: 15px;">
+                <table class="w-100">
+                  <tbody>
+                    <tr>
+                      <td>ON-TIME AND EFFICIENT WORK COMPLETION</td>
+                      <td>&nbsp;</td>
+                      <td align="right"><i class="bi bi-check2-circle fs-4"></i></td>
+                    </tr>
+                  </tbody>
+                </table>
               </div>
             </div>
             <div class="col-12 mt-3">
-              <div class="position-relative bg-white text-primary p-3" style="border-radius: 15px;">
-                <i class="bi bi-check2-circle"></i> COMPLETE SERVICE "ONE STOP ELECTRICAL SOLUTION"
+              <div class="position-relative bg-white text-primary py-2 px-3" style="border-radius: 15px;">
+                <table class="w-100">
+                  <tbody>
+                    <tr>
+                      <td>COMPLETE SERVICE "ONE STOP ELECTRICAL SOLUTION"</td>
+                      <td>&nbsp;</td>
+                      <td align="right"><i class="bi bi-check2-circle fs-4"></i></td>
+                    </tr>
+                  </tbody>
+                </table>
               </div>
             </div>
             <div class="col-12 mt-3">
-              <div class="position-relative bg-white text-primary p-3" style="border-radius: 15px;">
-                <i class="bi bi-check2-circle"></i> WORK GUARANTEE AND AFTER-SALES SERVICE
+              <div class="position-relative bg-white text-primary py-2 px-3" style="border-radius: 15px;">
+                <table class="w-100">
+                  <tbody>
+                    <tr>
+                      <td>WORK GUARANTEE AND AFTER-SALES SERVICE</td>
+                      <td>&nbsp;</td>
+                      <td align="right"><i class="bi bi-check2-circle fs-4"></i></td>
+                    </tr>
+                  </tbody>
+                </table>
               </div>
             </div>
           </div>
 
+        </div>
+        <div class="col-5">
+          <img src="{!! url('public/images/illustration.png') !!}" class="w-100">
         </div>
       </div>
     </div>
