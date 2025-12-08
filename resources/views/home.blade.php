@@ -42,7 +42,11 @@
     @include('components.navbar')
     @include('components.header')
     @include('components.about')
+    @include('components.services')
     
+    <script>
+      var URL = '{!! url('./') !!}';
+    </script>
     <script src="{!! url('vendor/twbs/bootstrap/dist/js/bootstrap.bundle.min.js'.$version) !!}"></script>
     <script src="{!! url('node_modules/aos/dist/aos.js'.$version) !!}"></script>
     <script src="{!! url('public/js/script.js'.$version) !!}"></script>

@@ -30,28 +30,37 @@
               </a>
             </div>
             <div class="col-auto mt-3">
-              <a href="{!! url('/about_us') !!}" class="text-decoration-none d-block">
+              <a href="{!! url('/about') !!}" class="text-decoration-none d-block">
                 <div class="position-relative">
                   <div class="text-secondary p-2 text-truncate" style="border-radius: 5px;">
-                    About Us
+                    About
                   </div>
                 </div>
               </a>
             </div>
             <div class="col-auto mt-3">
-              <a href="{!! url('/our_products') !!}" class="text-decoration-none d-block">
+              <a href="{!! url('/services') !!}" class="text-decoration-none d-block">
                 <div class="position-relative">
                   <div class="text-secondary p-2 text-truncate" style="border-radius: 5px;">
-                    Our Products
+                    Services
                   </div>
                 </div>
               </a>
             </div>
             <div class="col-auto mt-3">
-              <a href="{!! url('/contact_us') !!}" class="text-decoration-none d-block">
+              <a href="{!! url('/products') !!}" class="text-decoration-none d-block">
                 <div class="position-relative">
                   <div class="text-secondary p-2 text-truncate" style="border-radius: 5px;">
-                    Contact Us
+                    Products
+                  </div>
+                </div>
+              </a>
+            </div>
+            <div class="col-auto mt-3">
+              <a href="{!! url('/contact') !!}" class="text-decoration-none d-block">
+                <div class="position-relative">
+                  <div class="text-secondary p-2 text-truncate" style="border-radius: 5px;">
+                    Contact
                   </div>
                 </div>
               </a>
@@ -65,7 +74,7 @@
             </div>
             <div class="col-auto mt-3 px-0">
               <div class="form-check form-switch">
-                <input class="form-check-input" type="checkbox" id="theme" name="theme">
+                <input class="form-check-input" type="checkbox" id="theme" name="theme" style="box-shadow: unset;">
               </div>
             </div>
             <div class="col-auto mt-3">

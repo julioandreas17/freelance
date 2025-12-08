@@ -1,7 +1,7 @@
 <div class="company_values content w-100 d-none">
   <div class="row d-flex justify-content-center">
     <div class="col-6 mt-5">
-      <div class="position-relative w-100 overflow-hidden h-100" style="border-radius: 15px;" data-aos="fade-top">
+      <div class="position-relative w-100 overflow-hidden h-100" style="border-radius: 15px;" data-aos="">
         <div class="position-absolute start-0 end-0 top-0 bottom-0" style="background: url({!! url('public/images/profesional.jpg') !!});background-position: center;background-size: cover;background-repeat: no-repeat;"></div>
         <div class="position-relative w-100 h-100" style="margin-top: 300px;">
           <div class="position-absolute start-0 end-0 top-0 bottom-0 bg-white" style="opacity: 0.9;"></div>
@@ -16,7 +16,7 @@
     </div>
 
     <div class="col-6 mt-5">
-      <div class="position-relative w-100 overflow-hidden h-100" style="border-radius: 15px;"  data-aos="fade-top">
+      <div class="position-relative w-100 overflow-hidden h-100" style="border-radius: 15px;"  data-aos="">
         <div class="position-absolute start-0 end-0 top-0 bottom-0" style="background: url({!! url('public/images/safety.jpg') !!});background-position: center;background-size: cover;background-repeat: no-repeat;"></div>
         <div class="position-relative w-100 h-100" style="margin-top: 300px;">
           <div class="position-absolute start-0 end-0 top-0 bottom-0 bg-white" style="opacity: 0.9;"></div>
@@ -31,7 +31,7 @@
     </div>
 
     <div class="col-4 mt-5">
-      <div class="position-relative w-100 overflow-hidden h-100" style="border-radius: 15px;" data-aos="fade-top">
+      <div class="position-relative w-100 overflow-hidden h-100" style="border-radius: 15px;" data-aos="">
         <div class="position-absolute start-0 end-0 top-0 bottom-0" style="background: url({!! url('public/images/on_time.jpg') !!});background-position: center;background-size: cover;background-repeat: no-repeat;"></div>
         <div class="position-relative w-100 h-100" style="margin-top: 300px;">
           <div class="position-absolute start-0 end-0 top-0 bottom-0 bg-white" style="opacity: 0.9;"></div>
@@ -46,7 +46,7 @@
     </div>
 
     <div class="col-4 mt-5">
-      <div class="position-relative w-100 overflow-hidden h-100" style="border-radius: 15px;"  data-aos="fade-top">
+      <div class="position-relative w-100 overflow-hidden h-100" style="border-radius: 15px;"  data-aos="">
         <div class="position-absolute start-0 end-0 top-0 bottom-0" style="background: url({!! url('public/images/inovation.jpg') !!});background-position: center;background-size: cover;background-repeat: no-repeat;"></div>
         <div class="position-relative w-100 h-100" style="margin-top: 300px;">
           <div class="position-absolute start-0 end-0 top-0 bottom-0 bg-white" style="opacity: 0.9;"></div>
@@ -61,7 +61,7 @@
     </div>
 
     <div class="col-4 mt-5">
-      <div class="position-relative w-100 overflow-hidden h-100" style="border-radius: 15px;"  data-aos="fade-top">
+      <div class="position-relative w-100 overflow-hidden h-100" style="border-radius: 15px;"  data-aos="">
         <div class="position-absolute start-0 end-0 top-0 bottom-0" style="background: url({!! url('public/images/customer_service.jpg') !!});background-position: center;background-size: cover;background-repeat: no-repeat;"></div>
         <div class="position-relative w-100 h-100" style="margin-top: 300px;">
           <div class="position-absolute start-0 end-0 top-0 bottom-0 bg-white" style="opacity: 0.9;"></div>
