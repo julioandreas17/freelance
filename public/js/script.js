@@ -1,3 +1,4 @@
+var scroll_direction = 0;
 var action = {};
 AOS.init();
 
@@ -9,10 +10,10 @@ services[1] = {
     <div class="fs-5 text-primary">
       Low Voltage & Medium Voltage Electrical Installation Contractor
     </div>
-    <div class="fs-6 mt-2">
+    <div class="fs-6">
       We provide contractor services for electrical installations in various sectors, including :
     </div>
-    <table class="w-100 mt-1">
+    <table class="w-100 mt-3">
       <tbody>
         <tr>
           <td style="vertical-align: top;">1. </td>
@@ -44,7 +45,6 @@ services[1] = {
         </tr>
       </tbody>
     </table>
-    <div class="fs-6">&nbsp;</div>
   `,
 };
 
@@ -54,10 +54,10 @@ services[2] = {
     <div class="fs-5 text-primary">
       Electrical Engineering Planning & Consultation
     </div>
-    <div class="fs-6 mt-2">
+    <div class="fs-6">
       Our engineering team provides the following services :
     </div>
-    <table class="w-100 mt-1">
+    <table class="w-100 mt-3">
       <tbody>
         <tr>
           <td style="vertical-align: top;">1. </td>
@@ -85,7 +85,6 @@ services[2] = {
         </tr>
       </tbody>
     </table>
-    <div class="fs-6">&nbsp;</div>
   `,
 };
 
@@ -95,10 +94,10 @@ services[3] = {
     <div class="fs-5 text-primary">
       Procurement of Electrical Materials and Equipment
     </div>
-    <div class="fs-6 mt-2">
+    <div class="fs-6">
       We provide procurement services for electrical materials for both project-scale and maintenance needs, including :
     </div>
-    <table class="w-100 mt-1">
+    <table class="w-100 mt-3">
       <tbody>
         <tr>
           <td style="vertical-align: top;">1. </td>
@@ -126,7 +125,6 @@ services[3] = {
         </tr>
       </tbody>
     </table>
-    <div class="fs-6">&nbsp;</div>
   `,
 };
 
@@ -136,10 +134,10 @@ services[4] = {
     <div class="fs-5 text-primary">
       Panel Builder & Electrical System Fabrication
     </div>
-    <div class="fs-6 mt-2">
+    <div class="fs-6">
       We manufacture various types of electrical panels with high fabrication standards, including :
     </div>
-    <table class="w-100 mt-1">
+    <table class="w-100 mt-3">
       <tbody>
         <tr>
           <td style="vertical-align: top;">1. </td>
@@ -167,7 +165,6 @@ services[4] = {
         </tr>
       </tbody>
     </table>
-    <div class="fs-6">&nbsp;</div>
   `,
 };
 
@@ -177,10 +174,10 @@ services[5] = {
     <div class="fs-5 text-primary">
       Training, Certification & Consulting Services
     </div>
-    <div class="fs-6 mt-2">
+    <div class="fs-6">
       We provide human resource competency improvement services :
     </div>
-    <table class="w-100 mt-1">
+    <table class="w-100 mt-3">
       <tbody>
         <tr>
           <td style="vertical-align: top;">1. </td>
@@ -204,7 +201,6 @@ services[5] = {
         </tr>
       </tbody>
     </table>
-    <div class="fs-6">&nbsp;</div>
   `,
 };
 
@@ -267,11 +263,9 @@ $('body').find('.products').on('click', 'div[role="button"]', function (){
     });
 
     products_element.find('div[role="button"]').each(function (index, element){
-      $(element).removeClass('bg-white')
-      .removeClass('text-primary');
+      $(element).removeClass('bg-white');
     });
-    button.addClass('bg-white')
-    .addClass('text-primary');
+    button.addClass('bg-white');
 
     if (action == 'all'){
       products_element.find('.item').each(function (index, element){
@@ -297,7 +291,7 @@ function open_menu_top (){
   .addClass('top-0')
   .addClass('w-100')
   .addClass('shadow')
-  .css('z-index', 7)
+  .css('z-index', 1)
   .css('margin-top', '-'+ element[0].scrollHeight +'px');
   setTimeout(function (){
     element.css('transition', '0.5s')
@@ -344,10 +338,159 @@ function stand_menu_top (){
   }
 }
 
+function navbar_autofocus (){
+  let element = $('.menu-top');
+  let height = $('.stand-menu-top')[0].scrollHeight;
+  let body = $('html, body').scrollTop() + height;
+
+  element.find('.link').each(function (index, component){
+    let link = $(component);
+    let href = link.attr('href');
+    let target = $('.' + href);
+    let scroll_height = target[0].scrollHeight;
+
+    if (body >= target.offset().top && body <= (target.offset().top + scroll_height)){
+      if (action['menu'] == undefined){
+        action['menu'] = '';
+      }
+      if (action['menu'] != href){
+        action['menu'] = href;
+
+        element.find('.link').each(function (index, component_){
+          $(component_).find('.hover').fadeOut();
+          $(component_).find('.title').removeClass('text-primary').addClass('text-secondary');
+        });
+        link.find('.hover').fadeIn();
+        link.find('.title').removeClass('text-secondary').addClass('text-primary');
+
+        $('.mobile-menu').find('.item').each(function (index, component_){
+          $(component_).removeClass('bg-primary').removeClass('text-white');
+        });
+        $('.mobile-menu').find('.item[action="'+ href +'"]').addClass('bg-primary').addClass('text-white');
+      }
+    }
+  });
+}
+
 function render (){
   stand_menu_top();
+  navbar_autofocus();
   requestAnimationFrame(function (){
     render();
   });
 }
 render();
+
+function check_cookies (){
+  let element = $('.cookies');
+  let data = localStorage.getItem('cookies');
+  if (data == null){
+    element.find('.bi-chevron-down').trigger('click');
+  }
+}
+check_cookies();
+
+$('body').find('.cookies').on('click', 'button', function (){
+  let element = $('.cookies');
+  let button = $(this);
+  let action = '';
+  if (button.attr('action') != undefined){
+    action = button.attr('action');
+  }
+
+  if (action == 'accept'){
+    localStorage.setItem('cookies', 'accepted');
+    element.find('.bi-chevron-down').trigger('click');
+  }
+
+  if (action == 'decline'){
+    localStorage.setItem('cookies', 'rejected');
+    element.find('.bi-chevron-down').trigger('click');
+  }
+});
+
+$('body').find('.menu-top').on('click', '.link', function (event){
+  event.preventDefault();
+  let element = $(this);
+  let href = element.attr('href');
+
+  if ($('.' + href).length > 0){
+    $('html, body').animate({
+      scrollTop: ($('.' + href).offset().top + 1) - $('.stand-menu-top')[0].scrollHeight,
+    });
+  }
+});
+
+$('body').find('.mobile-menu').on('click', '.item', function (event){
+  event.preventDefault();
+  let element = $(this);
+  let href = element.attr('action');
+
+  if ($('.' + href).length > 0){
+    $('html, body').animate({
+      scrollTop: ($('.' + href).offset().top + 1) - $('.stand-menu-top')[0].scrollHeight,
+    });
+  }
+});
+
+$('body').find('.products').on('click', '.get-more', function (){
+  $('html, body').animate({
+    scrollTop: ($('.contact').offset().top + 1) - $('.stand-menu-top')[0].scrollHeight,
+  });
+});
+
+function valid_email (email) {
+  const pattern = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+  return pattern.test(email);
+}
+
+$('body').find('.contact').on('keyup', 'input', function (event){
+  if (event.code == 'Enter'){
+    $('.contact').find('button[type="button"]').find('i').trigger('click');
+  }
+});
+
+$('body').find('.contact').on('click', 'button[type="button"]', function (event){
+  event.preventDefault();
+  let parent = $('.contact');
+  let button = $(this);
+  let button_normal = button.html();
+  let loader = 'Process ...';
+  let fullname = parent.find('input[name="fullname"]').val();
+  let email = parent.find('input[name="email"]').val();
+  let message = parent.find('textarea[name="message"]').val();
+
+  if (fullname == ''){
+    Swal.fire({
+      title: "Fullname Required !",
+      text: "Please fill out your fullname",
+      icon: "error"
+    });
+  }else if (email == ''){
+    Swal.fire({
+      title: "Email Required !",
+      text: "Please fill out your email",
+      icon: "error"
+    });
+  }else if (valid_email(email) == false){
+    Swal.fire({
+      title: "Email Invalid !",
+      text: "Please check your email validation",
+      icon: "error"
+    });
+  }else if (message == ''){
+    Swal.fire({
+      title: "Message Required !",
+      text: "Please fill out your message",
+      icon: "error"
+    });
+  }else{
+
+    Swal.fire({
+      title: "Successfully !",
+      text: "Thanks, Our team will process your request",
+      icon: "success"
+    });
+
+  }
+});

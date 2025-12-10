@@ -79,6 +79,97 @@
   <div class="container">
     <div class="position-relative w-100">
       <div class="position-absolute start-0 end-0 bottom-0 bg-primary rounded-pill mx-auto" style="height: 4px;width: 30px;"></div>
+      <div class="fs-2 position-relative pb-3" align="center">
+        Our Products
+      </div>
+    </div>
+    
+    <div class="position-relative w-100 mt-5">
+      <div class="position-relative w-100">
+        <div class="row d-flex justify-content-center">
+          <div class="col-auto col-sm-auto col-md-12 col-lg-4 col-xl-4">
+
+            <div class="position-relative w-100">
+              <div class="row d-flex justify-content-center">
+                <div class="col-auto col-sm-auto col-md-auto col-lg-12 col-xl-12">
+                  <div class="position-relative w-100 p-2">
+                    <div class="bg-white w-100 p-3 text-primary" role="button" style="border-radius: 15px;" action="all">
+                      All Products
+                    </div>
+                  </div>
+                </div>
+
+                <div class="col-auto col-sm-auto col-md-auto col-lg-12 col-xl-12">
+                  <div class="position-relative w-100 p-2">
+                    <div class="w-100 p-3 text-primary" role="button" style="border-radius: 15px;" action="Excellent Product">
+                      Excellent Products
+                    </div>
+                  </div>
+                </div>
+
+                <div class="col-auto col-sm-auto col-md-auto col-lg-12 col-xl-12">
+                  <div class="position-relative w-100 p-2">
+                    <div class="w-100 p-3 text-primary" role="button" style="border-radius: 15px;" action="Equipment List">
+                      Equipment List
+                    </div>
+                  </div>
+                </div>
+
+                <div class="col-auto col-sm-auto col-md-auto col-lg-12 col-xl-12">
+                  <div class="position-relative w-100 p-2">
+                    <div class="w-100 p-3 text-primary get-more" role="button" style="border-radius: 15px;" action="">
+                      Get More Products
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+          </div>
+          <div class="col-12 col-sm-12 col-md-12 col-lg-8 col-xl-8">
+            
+            <div class="position-relative w-100">
+              <div class="position-absolute start-0 end-0 top-0 bottom-0 bg-white" style="border-radius: 15px;"></div>
+              <div class="position-relative w-100 p-2">
+                <div class="row">
+
+                  @foreach($products as $index_product => $fetch_product)
+
+                  <div class="col-12 col-sm-12 col-md-6 col-lg-6 col-xl-4 item" data-category="{{ $fetch_product['category'] }}">
+                    <div class="position-relative w-100 p-2">
+                      <div class="position-relative w-100 overflow-hidden" style="height: 200px;border-radius: 15px;border: 1px solid #ecf0f1;background: url({!! $fetch_product['image'] !!});background-size: cover;background-position: center;background-repeat: no-repeat;">
+                        <div class="position-absolute start-0 end-0 top-0 bottom-0 bg-dark" style="opacity: 0.7;"></div>
+                        <div class="position-absolute start-0 end-0 top-0 bottom-0" style="background: url({!! $fetch_product['image'] !!});background-size: contain;background-position: center;background-repeat: no-repeat;"></div>
+                      </div>
+                      <div class="position-relative w-100 pt-2">
+                        <div class="fs-5 text-primary fw-bold" align="center">
+                          {{ $fetch_product['title'] }}
+                        </div>
+                        <div class="mt-1" align="center">
+                          {{ $fetch_product['subtitle'] }}
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+
+                  @endforeach
+
+                </div>
+              </div>
+            </div>
+
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- 
+<div class="products position-relative w-100 py-5">
+  <div class="container">
+    <div class="position-relative w-100">
+      <div class="position-absolute start-0 end-0 bottom-0 bg-primary rounded-pill mx-auto" style="height: 4px;width: 30px;"></div>
       <div class="fs-1 position-relative pb-3" align="center">
         Our Products
       </div>
@@ -141,3 +232,4 @@
     </div>
   </div>
 </div>
+ -->

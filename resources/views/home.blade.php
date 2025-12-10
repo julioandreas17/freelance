@@ -47,11 +47,13 @@
     @include('components.services')
     @include('components.products')
     @include('components.contact')
+    @include('cookies')
     
     <script>
       var URL = '{!! url('./') !!}';
     </script>
     <script src="{!! url('vendor/twbs/bootstrap/dist/js/bootstrap.bundle.min.js'.$version) !!}"></script>
+    <script src="{!! url('public/js/sweetalert.min.js'.$version) !!}"></script>
     <script src="{!! url('node_modules/aos/dist/aos.js'.$version) !!}"></script>
     <script src="{!! url('public/js/script.js'.$version) !!}"></script>
   </body>
