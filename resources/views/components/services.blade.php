@@ -174,7 +174,7 @@
 
           <div class="row">
             <div class="col-12">
-              <div class="position-relative bg-white text-primary py-2 px-3" style="border-radius: 15px;" data-aos="fade-in">
+              <div class="position-relative bg-white text-primary py-2 px-3" style="border-radius: 15px;">
                 <div class="position-absolute top-0 bottom-0 start-0 my-3 bg-primary" style="width: 5px;border-radius: 0px 100px 100px 0px;"></div>
                 <div class="position-absolute top-0 bottom-0 end-0 my-3 bg-primary" style="width: 5px;border-radius: 100px 0px 0px 100px;"></div>
                 <table class="w-100 position-relative">
@@ -189,7 +189,7 @@
               </div>
             </div>
             <div class="col-12 mt-3">
-              <div class="position-relative bg-white text-primary py-2 px-3" style="border-radius: 15px;" data-aos="fade-in">
+              <div class="position-relative bg-white text-primary py-2 px-3" style="border-radius: 15px;">
                 <div class="position-absolute top-0 bottom-0 start-0 my-3 bg-primary" style="width: 5px;border-radius: 0px 100px 100px 0px;"></div>
                 <div class="position-absolute top-0 bottom-0 end-0 my-3 bg-primary" style="width: 5px;border-radius: 100px 0px 0px 100px;"></div>
                 <table class="w-100 position-relative">
@@ -204,7 +204,7 @@
               </div>
             </div>
             <div class="col-12 mt-3">
-              <div class="position-relative bg-white text-primary py-2 px-3" style="border-radius: 15px;" data-aos="fade-in">
+              <div class="position-relative bg-white text-primary py-2 px-3" style="border-radius: 15px;">
                 <div class="position-absolute top-0 bottom-0 start-0 my-3 bg-primary" style="width: 5px;border-radius: 0px 100px 100px 0px;"></div>
                 <div class="position-absolute top-0 bottom-0 end-0 my-3 bg-primary" style="width: 5px;border-radius: 100px 0px 0px 100px;"></div>
                 <table class="w-100 position-relative">
@@ -219,7 +219,7 @@
               </div>
             </div>
             <div class="col-12 mt-3">
-              <div class="position-relative bg-white text-primary py-2 px-3" style="border-radius: 15px;" data-aos="fade-in">
+              <div class="position-relative bg-white text-primary py-2 px-3" style="border-radius: 15px;">
                 <div class="position-absolute top-0 bottom-0 start-0 my-3 bg-primary" style="width: 5px;border-radius: 0px 100px 100px 0px;"></div>
                 <div class="position-absolute top-0 bottom-0 end-0 my-3 bg-primary" style="width: 5px;border-radius: 100px 0px 0px 100px;"></div>
                 <table class="w-100 position-relative">
@@ -234,7 +234,7 @@
               </div>
             </div>
             <div class="col-12 mt-3">
-              <div class="position-relative bg-white text-primary py-2 px-3" style="border-radius: 15px;" data-aos="fade-in">
+              <div class="position-relative bg-white text-primary py-2 px-3" style="border-radius: 15px;">
                 <div class="position-absolute top-0 bottom-0 start-0 my-3 bg-primary" style="width: 5px;border-radius: 0px 100px 100px 0px;"></div>
                 <div class="position-absolute top-0 bottom-0 end-0 my-3 bg-primary" style="width: 5px;border-radius: 100px 0px 0px 100px;"></div>
                 <table class="w-100 position-relative">
