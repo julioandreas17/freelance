@@ -48,6 +48,24 @@
     @include('components.products')
     @include('components.contact')
     @include('cookies')
+
+    <div class="splash position-fixed start-0 end-0 top-0 bottom-0 overflow-hidden" style="z-index: 9;">
+      <div class="position-absolute start-0 end-0 top-0 bottom-0 bg-primary"></div>
+      <div class="position-absolute start-0 end-0 top-0 bottom-0 d-flex align-items-center">
+        <div class="container">
+          <div class="row d-flex justify-content-center">
+            <div class="col-6 col-sm-6 col-md-4 col-lg-3 col-xl-3">
+              <div class="position-relative w-100 p-3">
+                <div class="position-relative w-100">
+                  <img src="{!! url(env('LOGO')) !!}" class="w-100" style="opacity: 0;">
+                  <div class="position-absolute start-0 end-0 top-0 bottom-0 bx-flashing" style="background-size: contain;background-position: center;background-repeat: no-repeat;background-image: url({!! url(env('LOGO')) !!});filter: grayscale(1) brightness(100);"></div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
     
     <script>
       var URL = '{!! url('./') !!}';

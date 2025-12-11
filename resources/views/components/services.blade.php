@@ -98,7 +98,11 @@
             <div class="position-relative w-100 p-2">
               <div class="position-relative w-100">
                 <div class="position-relative w-100" align="center">
-                  <img src="{!! url('public/images/contractor.jpg') !!}" alt="service" class="w-100" style="border-radius: 15px;">
+                  <img src="{!! url('public/images/contractor.jpg') !!}" alt="service" class="w-100" data-index="1" style="border-radius: 15px;">
+                  <img src="{!! url('public/images/consulting.jpg') !!}" alt="service" class="w-100 d-none" data-index="2" style="border-radius: 15px;">
+                  <img src="{!! url('public/images/procurement.jpg') !!}" alt="service" class="w-100 d-none" data-index="3" style="border-radius: 15px;">
+                  <img src="{!! url('public/images/panel.jpg') !!}" alt="service" class="w-100 d-none" data-index="4" style="border-radius: 15px;">
+                  <img src="{!! url('public/images/sertification.jpg') !!}" alt="service" class="w-100 d-none" data-index="5" style="border-radius: 15px;">
                 </div>
                 <div class="position-absolute start-50 top-0 translate-middle overflow-hidden rounded-circle shadow py-2 px-3" role="button" action="up" style="background-color: rgba(255, 255, 255, 0.7);">
                   <i class="bi bi-chevron-up fs-5"></i>

@@ -206,9 +206,6 @@ services[5] = {
 
 $('body').find('.services').on('click', 'div[role="button"]', function (){
   let services_element = $('.services');
-  services_element.find('img').css('transition', 'unset').css('opacity', '0');
-  services_element.find('.content').css('transition', 'unset').css('opacity', '0');
-
   let button = $(this);
   let action = button.attr('action');
   if (action == 'up'){
@@ -225,10 +222,14 @@ $('body').find('.services').on('click', 'div[role="button"]', function (){
     }
   }
 
-  services_element.find('img').attr('src', services[active_service]['image']);
+  services_element.find('img').each(function (index, img_element){
+    $(img_element).addClass('d-none');
+  });
+  services_element.find('img[data-index="'+ active_service +'"]').removeClass('d-none').css('transition', 'unset').css('opacity', '0');
+  services_element.find('.content').css('transition', 'unset').css('opacity', '0');
   services_element.find('.content').html(services[active_service]['content']);
   setTimeout(function (){
-    services_element.find('img').css('transition', '0.5s').css('opacity', '1');
+    services_element.find('img[data-index="'+ active_service +'"]').css('transition', '0.5s').css('opacity', '1');
     services_element.find('.content').css('transition', '0.5s').css('opacity', '1');
   }, 5);
 });
@@ -493,4 +494,10 @@ $('body').find('.contact').on('click', 'button[type="button"]', function (event)
     });
 
   }
+});
+
+$(window).on('load', function (){
+  setTimeout(function (){
+    $('.splash').fadeOut('slow');
+  }, 2000);
 });
