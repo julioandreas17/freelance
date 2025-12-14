@@ -36,7 +36,7 @@
             <div class="fs-1">&nbsp;</div>
         </div>
     </div>
-    <div class="position-absolute start-0 end-0 bottom-0" style="background: #ecf0f1;box-shadow: 0px -10px 50px 50px #ecf0f1;">
+    <div class="position-absolute start-0 end-0 bottom-0" style="background: #ecf0f1;box-shadow: 0px -5px 50px 100px #ecf0f1;">
         <div class="fs-5">&nbsp;</div>
     </div>
 </div>

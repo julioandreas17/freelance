@@ -41,8 +41,15 @@ function navbar_responsive (){
     }
 }
 
+function filosofi_background_color (){
+    let position = $('.filosofi').find('.logo')[0].scrollHeight;
+    position = position / 2;
+    $('.filosofi').find('.position-absolute').eq(1).css('margin-top', position + 'px');
+}
+
 function render (){
     navbar_responsive();
+    filosofi_background_color();
     requestAnimationFrame(function (){
         render();
     });

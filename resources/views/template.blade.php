@@ -32,6 +32,8 @@
     
         @include('components.header')
         @include('components.layanan')
+        @include('components.tentang')
+        @include('components.filosopi')
 
     </div>
     <!-- wrapper :: END -->
