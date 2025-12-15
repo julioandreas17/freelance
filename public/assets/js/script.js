@@ -129,6 +129,12 @@ $('body').on('click', '.scroll-menu', function (event){
     $('.sidebar').find('.close').trigger('click');
 });
 
+$('body').find('.ekspansi').on('click', 'button', function (){
+    $('.wrapper').animate({
+        scrollTop: content_scroll['kontak'],
+    });
+});
+
 $(window).on('load', function (){
     $('.splash').fadeOut('slow');
 });
