@@ -7,12 +7,12 @@
 			</button>
 		</div>
 		<div class="position-relative mt-2">
-			<a href="{!! url('./') !!}" class="d-block position-relative text-primary p-3 text-decoration-none">
+			<a href="layanan" class="d-block position-relative text-primary p-3 text-decoration-none scroll-menu">
 				Layanan Kami
 			</a>
 		</div>
 		<div class="position-relative mt-2">
-			<a href="{!! url('./') !!}" class="d-block position-relative text-primary p-3 text-decoration-none">
+			<a href="tentang" class="d-block position-relative text-primary p-3 text-decoration-none scroll-menu">
 				Tentang Kami
 			</a>
 		</div>
@@ -22,7 +22,7 @@
 			</a>
 		</div>
 		<div class="position-relative mt-2">
-			<a href="{!! url('./') !!}" class="d-block position-relative text-primary p-3 text-decoration-none">
+			<a href="kontak" class="d-block position-relative text-primary p-3 text-decoration-none scroll-menu">
 				Kontak Kami
 			</a>
 		</div>

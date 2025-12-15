@@ -1,4 +1,17 @@
+var content_scroll = {};
 var action = {};
+
+function content_scroll_define (){
+    $('.wrapper').scrollTop(0);
+    content_scroll['layanan'] = $('.layanan').offset().top - ($('.stand-navbar')[0].scrollHeight);
+    content_scroll['tentang'] = $('.tentang').offset().top - ($('.stand-navbar')[0].scrollHeight);
+    content_scroll['kontak'] = $('.kontak').offset().top - ($('.stand-navbar')[0].scrollHeight);
+}
+content_scroll_define();
+
+$(window).on('resize', function (){
+    content_scroll_define();
+});
 
 function navbar_responsive (){
     $('.stand-navbar').css('height', $('.stand-navbar')[0].scrollHeight + 'px');
@@ -47,9 +60,33 @@ function filosofi_background_color (){
     $('.filosofi').find('.position-absolute').eq(1).css('margin-top', position + 'px');
 }
 
+function active_menu (){
+    let wrapper_scroll = $('.wrapper').scrollTop();
+    wrapper_scroll = wrapper_scroll + 10;
+
+    $('.scroll-menu').each(function (index, element){
+        $(element).removeClass('bg-primary').removeClass('text-white').addClass('text-primary');
+    });
+
+    if (wrapper_scroll >= content_scroll['kontak']){
+        $('.scroll-menu[href="kontak"]').each(function (index, element){
+            $(element).removeClass('text-primary').addClass('bg-primary').addClass('text-white');
+        });
+    } else if (wrapper_scroll >= content_scroll['tentang']){
+        $('.scroll-menu[href="tentang"]').each(function (index, element){
+            $(element).removeClass('text-primary').addClass('bg-primary').addClass('text-white');
+        });
+    } else if (wrapper_scroll >= content_scroll['layanan']){
+        $('.scroll-menu[href="layanan"]').each(function (index, element){
+            $(element).removeClass('text-primary').addClass('bg-primary').addClass('text-white');
+        });
+    }
+}
+
 function render (){
     navbar_responsive();
     filosofi_background_color();
+    active_menu();
     requestAnimationFrame(function (){
         render();
     });
@@ -80,4 +117,18 @@ $('body').find('.sidebar').on('click', '.close, .bi-x', function (){
         .addClass('d-sm-none')
         .addClass('d-md-none');
     }, 510);
+});
+
+$('body').on('click', '.scroll-menu', function (event){
+    event.preventDefault();
+    let link = $(this);
+    let href = link.attr('href');
+    $('.wrapper').animate({
+        scrollTop: content_scroll[href],
+    });
+    $('.sidebar').find('.close').trigger('click');
+});
+
+$(window).on('load', function (){
+    $('.splash').fadeOut('slow');
 });

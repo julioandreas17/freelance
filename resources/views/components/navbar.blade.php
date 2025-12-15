@@ -30,7 +30,7 @@
                             <div class="row">
                                 <div class="col-auto">
                                     <div class="position-relative w-100">
-                                        <a href="{!! url('./') !!}" class="text-decoration-none text-primary py-2 px-3">
+                                        <a href="layanan" class="text-decoration-none text-primary py-2 px-3 scroll-menu rounded-pill">
                                             Layanan
                                         </a>
                                     </div>
@@ -38,7 +38,7 @@
 
                                 <div class="col-auto">
                                     <div class="position-relative w-100">
-                                        <a href="{!! url('./') !!}" class="text-decoration-none text-primary py-2 px-3">
+                                        <a href="tentang" class="text-decoration-none text-primary py-2 px-3 scroll-menu rounded-pill">
                                             Tentang Kami
                                         </a>
                                     </div>
@@ -46,7 +46,7 @@
 
                                 <div class="col-auto">
                                     <div class="position-relative w-100">
-                                        <a href="{!! url('./') !!}" class="text-decoration-none text-primary py-2 px-3">
+                                        <a href="{!! url('./') !!}" class="text-decoration-none text-primary py-2 px-3 rounded-pill">
                                             Galeri
                                         </a>
                                     </div>
@@ -54,7 +54,7 @@
 
                                 <div class="col-auto">
                                     <div class="position-relative w-100">
-                                        <a href="{!! url('./') !!}" class="text-decoration-none text-primary py-2 px-3">
+                                        <a href="kontak" class="text-decoration-none text-primary py-2 px-3 scroll-menu rounded-pill">
                                             Kontak
                                         </a>
                                     </div>

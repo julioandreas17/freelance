@@ -28,7 +28,7 @@
   <body style="background: #ecf0f1;">
     
     <!-- wrapper :: START -->
-    <div class="position-fixed start-0 end-0 top-0 bottom-0" style="overflow-x: hidden;overflow-y: auto;">
+    <div class="wrapper position-fixed start-0 end-0 top-0 bottom-0" style="overflow-x: hidden;overflow-y: auto;">
     
         @include('components.header')
         @include('components.layanan')
@@ -39,6 +39,16 @@
 
     </div>
     <!-- wrapper :: END -->
+
+    <!-- splash screen :: START -->
+    <div class="splash position-fixed start-0 end-0 top-0 bottom-0" style="z-index: 99999;">
+      <div class="position-absolute start-0 end-0 top-0 bottom-0 bg-primary d-flex align-items-center justify-content-center">
+        <div class="position-relative" align="center">
+          <img src="{!! url(env('ICON')) !!}" alt="Logo" class="rounded-circle bx-flashing" style="width: 120px;">
+        </div>
+      </div>
+    </div>
+    <!-- splash screen :: END -->
 
     <script src="{!! url('vendor/twbs/bootstrap/dist/js/bootstrap.bundle.min.js'.$version) !!}"></script>
     <script src="{!! url('public/assets/js/sweetalert2.js'.$version) !!}"></script>
