@@ -56,3 +56,28 @@ function render (){
 }
 
 render();
+
+$('body').find('.stand-navbar').on('click', '.bi-list', function (){
+    $('.sidebar').removeClass('d-none')
+    .removeClass('d-sm-none')
+    .removeClass('d-md-none')
+    .addClass('d-block')
+    .addClass('d-sm-block')
+    .addClass('d-md-block');
+    $('.sidebar').find('.content').css('transform', 'translateX(100%)');
+    setTimeout(function (){
+        $('.sidebar').find('.content').css('transform', 'translateX(0)');    
+    }, 5);
+});
+
+$('body').find('.sidebar').on('click', '.close, .bi-x', function (){
+    $('.sidebar').find('.content').css('transform', 'translateX(100%)');
+    setTimeout(function (){
+        $('.sidebar').removeClass('d-block')
+        .removeClass('d-sm-block')
+        .removeClass('d-md-block')
+        .addClass('d-none')
+        .addClass('d-sm-none')
+        .addClass('d-md-none');
+    }, 510);
+});

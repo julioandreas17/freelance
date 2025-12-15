@@ -35,6 +35,7 @@
         @include('components.tentang')
         @include('components.filosopi')
         @include('components.kontak')
+        @include('components.sidebar')
 
     </div>
     <!-- wrapper :: END -->
