@@ -125,9 +125,9 @@ $('body').find('.ekspansi').on('click', 'button', function (){
 
 function content_scroll_define (){
     $('.wrapper').scrollTop(0);
-    content_scroll['layanan'] = $('.layanan').offset().top - ($('.stand-navbar')[0].scrollHeight);
-    content_scroll['tentang'] = $('.tentang').offset().top - ($('.stand-navbar')[0].scrollHeight);
-    content_scroll['kontak'] = $('.kontak').offset().top - ($('.stand-navbar')[0].scrollHeight);
+    content_scroll['layanan'] = $('.layanan').offset().top - ($('.stand-navbar').find('div')[0].scrollHeight);
+    content_scroll['tentang'] = $('.tentang').offset().top - ($('.stand-navbar').find('div')[0].scrollHeight);
+    content_scroll['kontak'] = $('.kontak').offset().top - ($('.stand-navbar').find('div')[0].scrollHeight);
 }
 content_scroll_define();
 
