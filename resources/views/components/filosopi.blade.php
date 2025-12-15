@@ -89,8 +89,8 @@
 		<div class="row">
 			<div class="col-12 col-sm-12 col-md-5 col-lg-4 col-xl-4">
 				<div class="position-relative w-100 h-100 p-2">
-					<img src="{!! url('public/assets/images/owner.png') !!}" alt="Profile" class="w-100 d-block d-sm-block d-md-none d-lg-none d-xl-none" style="opacity: 0;">
-					<div class="position-absolute start-0 end-0 top-0 bottom-0 m-2 border border-5 border-white" style="border-radius: 20px;background: url({!! url('public/assets/images/owner.png') !!});background-size: 700px;background-position: center -180px;background-repeat: no-repeat;"></div>
+					<img src="{!! url('public/assets/images/owner_crop.png') !!}" alt="Profile" class="w-100 d-block d-sm-block d-md-none d-lg-none d-xl-none" style="opacity: 0;">
+					<div class="position-absolute start-0 end-0 top-0 bottom-0 m-2" style="border: 10px solid white;border-radius: 20px;background: url({!! url('public/assets/images/owner_crop.png') !!});background-size: auto 100%;background-position: center;background-repeat: no-repeat;"></div>
 				</div>
 			</div>
 			<div class="col-12 col-sm-12 col-md-7 col-lg-8 col-xl-8">
