@@ -86,6 +86,48 @@
 
 <div class="position-relative w-100 pt-5">
 	<div class="container">
+		<div class="row">
+			<div class="col-12 col-sm-12 col-md-5 col-lg-4 col-xl-4">
+				<div class="position-relative w-100 h-100 p-2">
+					<img src="{!! url('public/assets/images/owner.png') !!}" alt="Profile" class="w-100 d-block d-sm-block d-md-none d-lg-none d-xl-none" style="opacity: 0;">
+					<div class="position-absolute start-0 end-0 top-0 bottom-0 m-2 border border-5 border-white" style="border-radius: 20px;background: url({!! url('public/assets/images/owner.png') !!});background-size: 700px;background-position: center -180px;background-repeat: no-repeat;"></div>
+				</div>
+			</div>
+			<div class="col-12 col-sm-12 col-md-7 col-lg-8 col-xl-8">
+				<div class="position-relative w-100 p-2">
+					<div class="fs-3">
+						Ayu Febrina Rizal, S.T., M.T.
+					</div>
+					<div class="fs-5 text-primary">
+						Chief Executive Officer
+					</div>
+					<div class="text-primary">
+						Selaras Hypnotherapy & Human Development Center
+					</div>
+					<div class="position-relative mt-3">
+						<div class="position-absolute top-0 bottom-0 start-0 bg-primary rounded-pill" style="width: 50px;height: 5px;"></div>
+					</div>
+					<div class="mt-5" style="text-align: justify;">
+						Setiap jiwa membawa ceritanya sendiri—luka yang ingin dipulihkan, harapan yang ingin dinyalakan kembali, dan langkah yang menunggu untuk diarahkan.
+						Selaras hadir untuk menjadi tempat itu. Tempat di mana Anda diterima apa adanya, tanpa syarat, tanpa penilaian.
+					</div>
+					<div class="mt-3" style="text-align: justify;">
+						Sebagai hipnoterapis bersertifikasi dan pendamping perjalanan batin, saya meyakini bahwa kesembuhan bukan sekadar proses, tetapi panggilan jiwa untuk kembali menyatu dengan dirinya.
+						Perjalanan saya dalam dunia assessment, pengembangan manusia, dan pendidikan Psikologi semakin membuka mata bahwa setiap individu layak mendapatkan ruang aman untuk tumbuh.
+					</div>
+					<div class="mt-3" style="text-align: justify;">
+						Di Selaras, kami membersamai Anda dengan kelembutan, ilmu, dan kehadiran.
+						Karena setiap jiwa pantas menemukan jalannya pulang—
+						pulang kepada kedamaian, pulang kepada dirinya sendiri.
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+</div>
+
+<div class="position-relative w-100 pt-5 d-none">
+	<div class="container">
 		<div class="position-relative bg-white w-100 p-4 overflow-hidden" style="border-radius: 20px;">
 			<div class="position-absolute top-0 bottom-0 end-0 w-25 overflow-hidden d-none d-sm-none d-md-block d-lg-block d-xl-block">
 				<div class="position-absolute start-0 end-0 bottom-0 h-50 bg-primary" style="border-radius: 100% 0px 0px 0px;"></div>
