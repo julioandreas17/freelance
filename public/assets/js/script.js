@@ -1,18 +1,6 @@
 var content_scroll = {};
 var action = {};
 
-function content_scroll_define (){
-    $('.wrapper').scrollTop(0);
-    content_scroll['layanan'] = $('.layanan').offset().top - ($('.stand-navbar')[0].scrollHeight);
-    content_scroll['tentang'] = $('.tentang').offset().top - ($('.stand-navbar')[0].scrollHeight);
-    content_scroll['kontak'] = $('.kontak').offset().top - ($('.stand-navbar')[0].scrollHeight);
-}
-content_scroll_define();
-
-$(window).on('resize', function (){
-    content_scroll_define();
-});
-
 function navbar_responsive (){
     $('.stand-navbar').css('height', $('.stand-navbar')[0].scrollHeight + 'px');
     if ($('html, body').scrollTop() >= $('.stand-navbar').offset().top){
@@ -133,6 +121,18 @@ $('body').find('.ekspansi').on('click', 'button', function (){
     $('.wrapper').animate({
         scrollTop: content_scroll['kontak'],
     });
+});
+
+function content_scroll_define (){
+    $('.wrapper').scrollTop(0);
+    content_scroll['layanan'] = $('.layanan').offset().top - ($('.stand-navbar')[0].scrollHeight);
+    content_scroll['tentang'] = $('.tentang').offset().top - ($('.stand-navbar')[0].scrollHeight);
+    content_scroll['kontak'] = $('.kontak').offset().top - ($('.stand-navbar')[0].scrollHeight);
+}
+content_scroll_define();
+
+$(window).on('resize', function (){
+    content_scroll_define();
 });
 
 $(window).on('load', function (){
