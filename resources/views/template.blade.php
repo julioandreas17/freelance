@@ -34,6 +34,7 @@
         @include('components.layanan')
         @include('components.tentang')
         @include('components.filosopi')
+        @include('components.kontak')
 
     </div>
     <!-- wrapper :: END -->
