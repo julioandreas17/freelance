@@ -1,4 +1,3 @@
-var content_scroll = {};
 var action = {};
 
 function navbar_responsive (){
@@ -48,32 +47,47 @@ function filosofi_background_color (){
     $('.filosofi').find('.position-absolute').eq(1).css('margin-top', position + 'px');
 }
 
-function active_menu (){
-    let wrapper_scroll = $('.wrapper').scrollTop();
-    wrapper_scroll = wrapper_scroll + 10;
+function check_active_menu (){
+    let wrapper = $('.wrapper');
+    let wrapper_scroll = wrapper.scrollTop();
+    let links = $('.navbar').find('.scroll-menu');
+    links.each(function (index, element){
+        let link = $(this);
+        let href = link.attr('href');
+        let section = $('.' + href);
+        let section_offset = section.offset().top;
+        section_offset = section_offset - $('.stand-navbar')[0].scrollHeight;
 
-    $('.scroll-menu').each(function (index, element){
-        $(element).removeClass('bg-primary').removeClass('text-white').addClass('text-primary');
+        if (wrapper_scroll >= section_offset && section_offset <= section_offset + section[0].scrollHeight){
+            if (action['active_menu'] == undefined){
+                action['active_menu'] = '';
+            }
+            if (action['active_menu'] != href){
+                action['active_menu'] = href;
+            }
+        }
     });
+}
 
-    if (wrapper_scroll >= content_scroll['kontak']){
-        $('.scroll-menu[href="kontak"]').each(function (index, element){
-            $(element).removeClass('text-primary').addClass('bg-primary').addClass('text-white');
-        });
-    } else if (wrapper_scroll >= content_scroll['tentang']){
-        $('.scroll-menu[href="tentang"]').each(function (index, element){
-            $(element).removeClass('text-primary').addClass('bg-primary').addClass('text-white');
-        });
-    } else if (wrapper_scroll >= content_scroll['layanan']){
-        $('.scroll-menu[href="layanan"]').each(function (index, element){
-            $(element).removeClass('text-primary').addClass('bg-primary').addClass('text-white');
-        });
-    }
+function active_menu (){
+    let links = $('.scroll-menu');
+    links.each(function (index, element){
+        let link = $(this);
+        let href = link.attr('href');
+        if (action['active_menu'] != undefined){
+            if (href == action['active_menu']){
+                link.removeClass('text-primary').addClass('bg-primary').addClass('text-white');
+            }else{
+                link.addClass('text-primary').removeClass('bg-primary').removeClass('text-white');
+            }
+        }
+    });
 }
 
 function render (){
     navbar_responsive();
     filosofi_background_color();
+    check_active_menu();
     active_menu();
     requestAnimationFrame(function (){
         render();
@@ -111,28 +125,17 @@ $('body').on('click', '.scroll-menu', function (event){
     event.preventDefault();
     let link = $(this);
     let href = link.attr('href');
+    let scroll_top = $('.wrapper').scrollTop();
+    scroll_top = scroll_top + $('.' + href).offset().top;
+    scroll_top = scroll_top - $('.stand-navbar')[0].scrollHeight;
     $('.wrapper').animate({
-        scrollTop: content_scroll[href],
+        scrollTop: scroll_top,
     });
     $('.sidebar').find('.close').trigger('click');
 });
 
 $('body').find('.ekspansi').on('click', 'button', function (){
-    $('.wrapper').animate({
-        scrollTop: content_scroll['kontak'],
-    });
-});
-
-function content_scroll_define (){
-    $('.wrapper').scrollTop(0);
-    content_scroll['layanan'] = $('.layanan').offset().top - ($('.stand-navbar').find('div')[0].scrollHeight);
-    content_scroll['tentang'] = $('.tentang').offset().top - ($('.stand-navbar').find('div')[0].scrollHeight);
-    content_scroll['kontak'] = $('.kontak').offset().top - ($('.stand-navbar').find('div')[0].scrollHeight);
-}
-content_scroll_define();
-
-$(window).on('resize', function (){
-    content_scroll_define();
+    $('.scroll-menu[href="kontak"]').eq(0).trigger('click');
 });
 
 $(window).on('load', function (){
