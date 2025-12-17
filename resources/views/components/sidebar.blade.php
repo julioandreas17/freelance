@@ -17,7 +17,7 @@
 			</a>
 		</div>
 		<div class="position-relative mt-2">
-			<a href="{!! url('./') !!}" class="d-block position-relative text-primary p-3 text-decoration-none">
+			<a href="{!! url('galeri') !!}" class="d-block position-relative {!! $page == 'galeri' ? 'bg-primary text-white' : 'text-primary' !!} p-3 text-decoration-none">
 				Galeri
 			</a>
 		</div>

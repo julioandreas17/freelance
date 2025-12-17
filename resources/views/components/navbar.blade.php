@@ -46,7 +46,7 @@
 
                                 <div class="col-auto">
                                     <div class="position-relative w-100">
-                                        <a href="{!! url('./') !!}" class="text-decoration-none text-primary py-2 px-3 rounded-pill">
+                                        <a href="{!! url('galeri') !!}" class="text-decoration-none {!! $page == 'galeri' ? 'bg-primary text-white' : 'text-primary' !!} py-2 px-3 rounded-pill">
                                             Galeri
                                         </a>
                                     </div>

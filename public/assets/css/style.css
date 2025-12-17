@@ -12,6 +12,11 @@ html, body {
     background: #208080 !important;
 }
 
+.btn-primary {
+    background: #208080 !important;
+    border-color: #208080 !important;
+}
+
 .border-primary {
     border-color: #208080 !important;
 }
@@ -22,6 +27,11 @@ html, body {
 
 .bg-secondary {
     background: #E0A020 !important;
+}
+
+.btn-secondary {
+    background: #E0A020 !important;
+    border-color: #E0A020 !important;
 }
 
 .border-secondary {
