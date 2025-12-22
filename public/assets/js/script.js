@@ -385,6 +385,19 @@ function load_data_galeri (){
 
                     let column = ``;
                     $.each(response.data, function (index, gallery){
+                        let options = ``;
+                        if (session != ''){
+                            options = `
+                                <div class="position-absolute end-0 top-0">
+                                    <div class="dropdown position-relative m-2 bg-white py-1 px-2 rounded-pill" role="button" data-bs-toggle="dropdown">
+                                        <i class="bi bi-chevron-down"></i>
+                                        <ul class="dropdown-menu dropdown-menu-end">
+                                            <li><a class="dropdown-item text-danger hapus-galeri" role="button" data-id="${ gallery.id }"><i class="bi bi-trash"></i> Hapus Galeri</a></li>
+                                        </ul>
+                                    </div>
+                                </div>
+                            `;
+                        }
                         column += `
                             <div class="col-12 col-sm-12 col-md-6 col-lg-4 col-xl-4">
                                 <div class="position-relative w-100 h-100 p-3">
@@ -393,6 +406,7 @@ function load_data_galeri (){
                                         <div class="position-absolute start-0 end-0 top-0 bottom-0" style="border-radius: 20px;background-image: url(${ gallery.picture });background-size: cover;background-position: center;background-repeat: no-repeat;"></div>
                                         <div class="position-absolute start-0 end-0 top-0 bottom-0 bg-dark" style="border-radius: 20px;opacity: 0.7;"></div>
                                         <div class="position-absolute start-0 end-0 top-0 bottom-0" style="border-radius: 20px;background-image: url(${ gallery.picture });background-size: contain;background-position: center;background-repeat: no-repeat;"></div>
+                                        ${ options }
                                     </div>
                                 </div>
                             </div>
@@ -430,3 +444,59 @@ function load_data_galeri (){
     }
 }
 load_data_galeri();
+
+$('body').find('.galeri').on('click', '.hapus-galeri', function (){
+    let parent = $('.galeri');
+    let link = $(this);
+    let id = link.attr('data-id');
+    Swal.fire({
+        title: "Yakin ingin mneghapus galeri?",
+        showDenyButton: true,
+        showCancelButton: false,
+        confirmButtonText: "Jangan",
+        denyButtonText: "Hapus Saja"
+      }).then((result) => {
+        if (result.isConfirmed) {
+          // nothing happend
+        } else if (result.isDenied) {
+          
+            let data = new FormData();
+            data.append('session', session);
+            data.append('id', id);
+            $.ajax({
+                url: './api/hapus_gallery',
+                type: 'POST',
+                data: data,
+                contentType: false,
+                processData: false,
+                success: function (response){
+                    if (response.status == 'error'){
+                        Swal.fire({
+                            icon: 'error',
+                            title: 'Opps !',
+                            text: response.message,
+                        });
+                    }
+
+                    if (response.status == 'success'){
+                        load_data_galeri();
+                        Swal.fire({
+                            icon: 'success',
+                            title: 'Sip !',
+                            text: response.message,
+                        });
+                    }
+                },
+                error: function (response){
+                    console.log(JSON.stringify(response));
+                    Swal.fire({
+                        icon: 'error',
+                        title: 'Opps !',
+                        text: 'Terjadi kesalahan sistem',
+                    });
+                },
+            });
+
+        }
+      });
+});
