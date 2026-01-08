@@ -67,24 +67,18 @@
             More Details
           </div>
           <div class="mt-3 text-white" style="font-size: 13px;">
-            Phone 01 :
+            Open WhatsApp :
           </div>
-          <div class="text-white">
-            {{ env('PHONE_01', '-') }}
+          @for($count = 1; $count <= 3; $count ++)
+          
+          <div class="position-relative mt-2">
+            <a href="https://wa.me/{!! str_replace(array('+', '-'), array('', ''), env('PHONE_0'.$count, '-')) !!}" target="_blank" class="text-decoration-none btn btn-success w-100 rounded-pill">
+              <i class="bi bi-whatsapp"></i> {{ env('PHONE_0'.$count, '-') }}
+            </a>
           </div>
-          <div class="mt-2 text-white" style="font-size: 13px;">
-            Phone 02 :
-          </div>
-          <div class="text-white">
-            {{ env('PHONE_02', '-') }}
-          </div>
-          <div class="mt-2 text-white" style="font-size: 13px;">
-            Phone 03 :
-          </div>
-          <div class="text-white">
-            {{ env('PHONE_03', '-') }}
-          </div>
-          <div class="mt-2 text-white" style="font-size: 13px;">
+
+          @endfor
+          <div class="mt-3 text-white" style="font-size: 13px;">
             Email :
           </div>
           <div class="text-white">
