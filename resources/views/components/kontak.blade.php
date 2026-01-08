@@ -29,21 +29,20 @@
 					
 					<div class="position-relative w-100 p-3">
 						<div class="position-relative w-100 p-3 bg-white shadow-sm" style="border-radius: 20px;">
-							
-							<div class="row d-flex align-items-center">
-								<div class="col-auto">
-									<div class="position-relative p-2">
-										<i class="bi bi-phone text-primary fs-2"></i>
-									</div>
-								</div>
-								<div class="col">
-									<div class="position-relative p-2">
-										<a href="https://wa.me/{!! str_replace(array('+', ' '), array('', ''), env('PHONE')) !!}" target="_blank" class="text-decoration-none" style="color: unset;">
-											{{ env('PHONE') }}
-										</a>
-									</div>
-								</div>
+
+							<div class="position-relative">
+								Open WhatsApp :
 							</div>
+
+							@foreach( explode('|', env('PHONE')) as $data_phone)
+
+							<div class="position-relative mt-2">
+								<a href="https://wa.me/{!! str_replace(array('+', ' '), array('', ''), $data_phone) !!}" target="_blank" class="text-decoration-none btn btn-primary w-100 rounded-pill">
+									<i class="bi bi-whatsapp"></i> {{ $data_phone }}
+								</a>
+							</div>
+
+							@endforeach
 
 							<div class="row d-flex align-items-center mt-3">
 								<div class="col-auto">
