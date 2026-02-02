@@ -49,6 +49,55 @@
     @include('components.contact')
     @include('cookies')
 
+    <!-- WhatsApp float button :: START -->
+    <div class=" position-fixed bottom-0 end-0 p-3" style="z-index: 8;">
+      <div class="position-relative overflow-hidden shadow" style="transition: 0.25s;border-radius: 15px;">
+        <div class="position-absolute start-0 end-0 top-0 bottom-0" style="backdrop-filter: blur(10px);"></div>
+        <div class="position-absolute start-0 end-0 top-0 bottom-0" style="background-color: #ecf0f1;opacity: 0.8;"></div>
+        <div class="position-relative whatsapp-float d-none">
+          @foreach(array(env('PHONE_01'), env('PHONE_02'), env('PHONE_03')) as $index => $phone)
+            <div class="position-relative px-3 pt-3 pb-0">
+              <div class="position-relative">
+                <div class="row d-flex flex-nowrap align-items-center">
+                  <div class="col-auto pe-0">
+                    <div class="bg-success text-light rounded-pill px-2 py-1">
+                      <i class="bi bi-person-circle"></i>
+                    </div>
+                  </div>
+                  <div class="col-auto ps-1">
+                    <div class="text-truncate">
+                      Admin {{ $index + 1 }}
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div class="position-relative mt-2 bg-light rounded-4 px-3 py-2 text-success" role="button" style="border-radius: 10px;" onclick="window.open('https://wa.me/{!! str_replace(array('+', ' '), array('', ''), $phone) !!}', '_blank')">
+                <div class="row d-flex align-items-center justify-content-between flex-nowrap">
+                  <div class="col-auto">
+                    <div class="fs-5 text-truncate">
+                      {{ $phone }}
+                    </div>
+                  </div>
+                  <div class="col-auto">
+                    <div class="fs-6">
+                      <i class="bi bi-chevron-right"></i>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          @endforeach
+          <div class="position-relative">&nbsp;</div>
+        </div>
+      </div>
+      <div class="position-relative p-3" align="right">
+        <span class="bg-success text-light fs-1 rounded-pill p-2 px-3 shadow whatsapp-float-button" role="button">
+          <i class="bi bi-whatsapp"></i>
+        </span>
+      </div>
+    </div>
+    <!-- WhatsApp float button :: END -->
+
     <div class="splash position-fixed start-0 end-0 top-0 bottom-0 overflow-hidden" style="z-index: 9;">
       <div class="position-absolute start-0 end-0 top-0 bottom-0 bg-primary"></div>
       <div class="position-absolute start-0 end-0 top-0 bottom-0 d-flex align-items-center">

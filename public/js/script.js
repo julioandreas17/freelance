@@ -501,3 +501,15 @@ $(window).on('load', function (){
     $('.splash').fadeOut('slow');
   }, 2000);
 });
+
+$('body').on('click', '.whatsapp-float-button', function (){
+    let button = $(this);
+    let content = $('.whatsapp-float');
+    if (content.hasClass('d-none') == true){
+        content.removeClass('d-none');
+        button.removeClass('bg-success').addClass('bg-danger').html('<i class="bi bi-x"></i>');
+    }else{
+        content.addClass('d-none');
+        button.removeClass('bg-danger').addClass('bg-success').html('<i class="bi bi-whatsapp"></i>');
+    }
+});
